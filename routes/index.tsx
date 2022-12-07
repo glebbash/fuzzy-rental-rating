@@ -23,7 +23,11 @@ export default function Home() {
           <pre>@rating := {displayRule(RATING_RULE)}</pre>
         </h3>
         <PlacesView />
-        <pre>@glebbash 08/12/2022</pre>
+        <pre>
+          @glebbash 08/12/2022. A fuzzy logic system to calculate rating of the places to rent.{" "}
+          <a href="https://en.wikipedia.org/wiki/Fuzzy_logic">Wikipedia</a>{" "}
+          <a href="https://youtube.com/playlist?list=PLJEWP9Z0q94CxI6WHM4Oi5yAGKtIzZI5k">Good explanation</a>
+        </pre>
       </div>
     </div>
   );
