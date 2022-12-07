@@ -1,11 +1,12 @@
 import { Head } from "$fresh/runtime.ts";
 import Counter from "../islands/Counter.tsx";
+import StarRatings from "https://esm.sh/react-star-ratings@2.3.0?alias=react:preact/compat";
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>Fresh App</title>
+        <title>Fuzzy Store Rating</title>
       </Head>
       <div>
         <img
@@ -14,11 +15,13 @@ export default function Home() {
           height="128"
           alt="the fresh logo: a sliced lemon dripping with juice"
         />
-        <p>
-          Welcome to `fresh`. Try updating this message in the ./routes/index.tsx
-          file, and refresh.
-        </p>
         <Counter start={3} />
+        <StarRatings
+          rating={2.403}
+          starDimension="30px"
+          starSpacing="2px"
+          starRatedColor="rgb(255,226,52)"
+        />
       </div>
     </>
   );
