@@ -1,8 +1,8 @@
-# Fuzzy store rating
+# Fuzzy rental rating (lab project)
 
-Store rating system using fuzzy logic (lab project)
+A fuzzy logic system used to calculate rating of the rental places.
 
-- [Fuzzy store rating](#fuzzy-store-rating)
+- [Fuzzy rental rating (lab project)](#fuzzy-rental-rating-lab-project)
   - [Problem](#problem)
   - [Solution](#solution)
   - [Architecture](#architecture)
@@ -10,7 +10,7 @@ Store rating system using fuzzy logic (lab project)
 
 ## Problem
 
-Problem: finding the best place to rent a store
+Problem: finding the best place to rent
 
 Factors that affect the decision:
 
@@ -76,7 +76,7 @@ The system consists of:
 - **Inference engine**
 
   The inference engine uses the rules from knowledge base to infer fuzzy value
-  of store rating based on fuzzy values of popularity, renovation, rent.
+  of rating based on fuzzy values of popularity, renovation, rent.
 
 - **Defuzzifier**
 
