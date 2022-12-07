@@ -29,7 +29,8 @@ export default function Home() {
 
         <pre>
           <a href="https://github.com/glebbash">@glebbash</a>{" "}
-          08/12/2022. A fuzzy logic system used to calculate rating of the rental places.{" "}
+          08/12/2022{" "}
+          A fuzzy logic system used to calculate the rating of rental places.{" "}
           <a href="https://en.wikipedia.org/wiki/Fuzzy_logic">Wikipedia</a>{" "}
           <a href="https://youtube.com/playlist?list=PLJEWP9Z0q94CxI6WHM4Oi5yAGKtIzZI5k">Good explanation</a>{" "}
           <a href="https://github.com/glebbash/fuzzy-rental-rating">Source</a>{" "}

@@ -1,6 +1,6 @@
 # Fuzzy rental rating (lab project)
 
-A fuzzy logic system used to calculate rating of the rental places.
+A fuzzy logic system used to calculate the rating of rental places.
 
 - [Fuzzy rental rating (lab project)](#fuzzy-rental-rating-lab-project)
   - [Problem](#problem)
