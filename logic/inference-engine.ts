@@ -13,7 +13,7 @@ export function infer(rule, ctx) {
 
 export function displayRule(rule) {
   if (typeof rule === "string") {
-    return "$" + rule;
+    return "@" + rule;
   }
 
   return "(" + rule[0] + " " + rule.slice(1).map(displayRule).join(" ") + ")";

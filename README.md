@@ -1,9 +1,11 @@
-# fuzzy-store-rating
+# Fuzzy store rating
 
 Store rating system using fuzzy logic (lab project)
 
-- [fuzzy-store-rating](#fuzzy-store-rating)
+- [Fuzzy store rating](#fuzzy-store-rating)
   - [Problem](#problem)
+  - [Solution](#solution)
+  - [Architecture](#architecture)
   - [Usage](#usage)
 
 ## Problem
@@ -13,7 +15,7 @@ Problem: finding the best place to rent a store
 Factors that affect the decision:
 
 - Place popularity: how many people visit the place per hour
-- renovation: how many hours is needed to bring the place to a good condition
+- Renovation: how many hours is needed to bring the place to a good condition
 - Rent: how much does it cost to rent the place per month
 
 Example data in json:
@@ -47,32 +49,38 @@ Example data in json:
 ]
 ```
 
+## Solution
+
 The best place is the one with the highest popularity, least time for renovation
 and the lowest rent.
 
 The goal is to calculate a rating (from 0 to 5 stars) for each place that can be
 used to rank them.
 
-This can be achived using the fuzzy logic.
+This can be achived using the fuzzy logic algorithm.
+
+## Architecture
 
 The system consists of:
 
-- **fuzzyfier**
+- **Fuzzyfier**
 
   The fuzzyfier converts the crisp data into fuzzy data.
 
-- **fuzzy rules**
+- **Knowledge base**
 
-  The fuzzy rules are used to define the fuzzy logic.
+  Contains:
+  - fuzzy logic rule to calculate rating.
+  - membership functions for popularity, renovation, rent
 
-- **inference engine**
+- **Inference engine**
 
-  The inference engine uses the fuzzy rules to calculate the rating for each
-  place.
+  The inference engine uses the rules from knowledge base to infer fuzzy value
+  of store rating based on fuzzy values of popularity, renovation, rent.
 
-- **defuzzifier**
+- **Defuzzifier**
 
-  The defuzzifier converts the fuzzy rating into a crisp rating.
+  The defuzzifier converts the fuzzy data into a crisp data.
 
 ## Usage
 

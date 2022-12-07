@@ -20,9 +20,10 @@ export default function Home() {
           Fuzzy Store Rating
         </h1>
         <h3>
-          <pre>rule: {displayRule(RATING_RULE)}</pre>
+          <pre>@rating := {displayRule(RATING_RULE)}</pre>
         </h3>
         <PlacesView />
+        <pre>@glebbash 08/12/2022</pre>
       </div>
     </div>
   );

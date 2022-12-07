@@ -3,6 +3,7 @@
 
 import { FuzzySet } from "./types.ts";
 
+// Centroid method
 export function defuzz(memberships, fuzzyValue: FuzzySet) {
   return fuzzyValue.map((x, i) => x * midpoint(memberships[i])).reduce(sum) /
     fuzzyValue.reduce(sum);
