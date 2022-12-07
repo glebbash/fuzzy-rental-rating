@@ -1,28 +1,29 @@
 import { Head } from "$fresh/runtime.ts";
-import Counter from "../islands/Counter.tsx";
-import StarRatings from "https://esm.sh/react-star-ratings@2.3.0?alias=react:preact/compat";
+
+import PlacesView from "../islands/PlacesView.tsx";
+import { displayRule } from "../logic/inference-engine.ts";
+import { RATING_RULE } from "../logic/knowledge-base.ts";
 
 export default function Home() {
   return (
-    <>
+    <div>
       <Head>
         <title>Fuzzy Store Rating</title>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <link rel="stylesheet" href="./index.css" />
       </Head>
-      <div>
-        <img
-          src="/logo.svg"
-          width="128"
-          height="128"
-          alt="the fresh logo: a sliced lemon dripping with juice"
-        />
-        <Counter start={3} />
-        <StarRatings
-          rating={2.403}
-          starDimension="30px"
-          starSpacing="2px"
-          starRatedColor="rgb(255,226,52)"
-        />
+      <div style={{ display: "flex", flexDirection: "column" }}>
+        <h1>
+          Fuzzy Store Rating
+        </h1>
+        <h3>
+          <pre>rule: {displayRule(RATING_RULE)}</pre>
+        </h3>
+        <PlacesView />
       </div>
-    </>
+    </div>
   );
 }
