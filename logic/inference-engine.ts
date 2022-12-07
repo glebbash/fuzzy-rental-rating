@@ -3,20 +3,20 @@
 
 import { zip } from "./utils.ts";
 
-export function infer(rule, ctx) {
-  if (typeof rule === "string") {
-    return FUZZY_OPERATIONS["_value"](rule, ctx);
-  }
-
-  return FUZZY_OPERATIONS[rule[0]](rule.slice(1), ctx);
-}
-
 export function displayRule(rule) {
   if (typeof rule === "string") {
     return "@" + rule;
   }
 
   return "(" + rule[0] + " " + rule.slice(1).map(displayRule).join(" ") + ")";
+}
+
+export function infer(rule, ctx) {
+  if (typeof rule === "string") {
+    return FUZZY_OPERATIONS["_value"](rule, ctx);
+  }
+
+  return FUZZY_OPERATIONS[rule[0]](rule.slice(1), ctx);
 }
 
 const FUZZY_OPERATIONS = {

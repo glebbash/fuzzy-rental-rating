@@ -1,11 +1,11 @@
 // deno-lint-ignore ban-ts-comment
 // @ts-nocheck
 
-export function fuzz(memberships, crispValue) {
-  return memberships.map((m) => {
-    const membershipFn = MEMBERSHIP_FNS[m.type];
+export function fuzz(memberships, crispValue: number) {
+  return memberships.map((membership) => {
+    const membershipFn = MEMBERSHIP_FNS[membership.type];
 
-    return membershipFn(crispValue, m);
+    return membershipFn(crispValue, membership);
   });
 }
 
